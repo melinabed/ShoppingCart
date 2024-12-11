@@ -1,3 +1,5 @@
+import styles from "./ProductList.module.css";
+
 const products = [
   {
     id: 1,
@@ -51,14 +53,16 @@ const products = [
 
 const ProductList = () => {
   return (
-    <ul>
+    <div className={styles.cardContainer}>
       {products.map((item) => (
-        <li key={item.id}>
-          {item.title}
+        <div key={item.id} className={styles.card}>
           <img src={item.image} alt={item.title} />
-        </li>
+          <p>{item.title}</p>
+          <p>${item.price}</p>
+          <button className={styles.btn}>Add to Cart</button>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 };
 
