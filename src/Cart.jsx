@@ -1,5 +1,14 @@
+import CartList from "./Components/CartList";
+
 const Cart = () => {
-  return <h2>This is the cart</h2>;
+  return (
+    <>
+      <header>
+        <h1>Kristian&apos;s Closet</h1>
+      </header>
+      <CartList />
+    </>
+  );
 };
 
 export default Cart;
